@@ -30,13 +30,7 @@ end
 
 def initial_round
   # code #initial_round here
-
-  times_to_deal_cards = 2
-
-  Range.new(1, times_to_deal_cards).inject do |sum, i|
-    sum + deal_card
-  end
-
+  deal_card + deal_card
 end
 
 def hit?
