@@ -11,6 +11,7 @@ end
 def display_card_total(cards_total)
   # code #display_card_total here
   puts "Your cards add up to #{cards_total}"
+  cards_total
 end
 
 def prompt_user
@@ -54,6 +55,7 @@ end
 
 def invalid_command
   # code invalid_command here
+  puts "Error"
 end
 
 #####################################################
@@ -64,6 +66,9 @@ def runner
   # code runner here
   welcome
   cards = initial_round
-  hit? display_card_total(cards)
-  end_game
+  while cards < 21
+    cards = hit? cards
+    cards = display_card_total(cards)
+  end
+  end_game(cards)
 end
