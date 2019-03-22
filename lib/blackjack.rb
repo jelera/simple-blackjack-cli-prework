@@ -41,13 +41,12 @@ def hit?(card)
 
   prompt_user
   game_state = get_user_input
-  cards_total = 0
 
   if game_state == "s"
     card
   elsif game_state == "h"
 
-    cards_total = cards_total + deal_card
+    card + deal_card
 
   end
 
