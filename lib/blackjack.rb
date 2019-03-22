@@ -36,12 +36,20 @@ def initial_round
   cards_total
 end
 
-def hit?(cards_total)
+def hit?(card)
   # code hit? here
+  
   prompt_user
-  get_user_input
+  game_state = get_user_input
+  cards_total = 0
 
-  cards_total
+  if game_state == "s"
+    card
+  elsif game_state == "h"
+
+    cards_total = cards_total + deal_card
+    
+  end
 
 end
 
