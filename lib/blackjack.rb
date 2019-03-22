@@ -38,7 +38,7 @@ end
 
 def hit?(card)
   # code hit? here
-  
+
   prompt_user
   game_state = get_user_input
   cards_total = 0
@@ -48,7 +48,7 @@ def hit?(card)
   elsif game_state == "h"
 
     cards_total = cards_total + deal_card
-    
+
   end
 
 end
